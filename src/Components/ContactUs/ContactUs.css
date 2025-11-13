@@ -1,0 +1,43 @@
+.ContectHeroSection {
+  height: 100vh;
+  background-color: yellow;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.formContainer {
+  width: 70%;
+  margin: auto auto;
+}
+.inpitFields {
+  width: 100%;
+  margin: 05px 0px;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  padding: 0px 10px;
+}
+.textAreaFields {
+  padding: 02px 8px;
+  margin: 05px 0px;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+}
+.submitBtn {
+  padding: 10px 30px;
+  background-color: white;
+  border: none;
+}
+
+@media screen and (max-width: 768px) {
+  .formContainer {
+    width: 90%;
+    margin: auto auto;
+  }
+}
+
+
+
+

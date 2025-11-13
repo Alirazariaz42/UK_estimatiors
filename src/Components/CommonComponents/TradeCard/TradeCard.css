@@ -1,0 +1,135 @@
+.wallet {
+  --bg-color: #ffbf00;
+  --bg-color-light: #f0e7ff;
+  --text-color-hover: #fff;
+  --box-shadow-color: 0 0 5px #fdbe01, 0 0 40px #ff00fff1, 0 0 40px #fdbe01;
+}
+
+.card {
+  width: 250px;
+  min-height: 350px;
+  background: #2e4a53;
+  border-top-right-radius: 10px;
+  padding: 0px 10px;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  position: relative;
+  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04);
+  transition: all 0.1s ease-out;
+  text-decoration: none;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.005) translateZ(0);
+  box-shadow: 0 0 5px #fdbe01, 0 0 40px #fdbe01, 0 0 40px #ff00ff88;
+  color: #2e4a53 !important;
+  transform: scale(1.04);
+  transition: all 0.3s ease-in-out;
+}
+.circle img {
+  z-index: 2;
+}
+.card:hover .overlay {
+  transform: scale(7) translateZ(0);
+}
+
+.card:hover .circle {
+  border-color: var(--bg-color-light);
+  background: var(--bg-color);
+}
+
+.card:hover .circle:after {
+  background: var(--bg-color-light);
+}
+
+/* .card:hover p {
+  color: var(--text-color-hover);
+} */
+
+.card:active {
+  transform: scale(1) translateZ(0);
+  box-shadow: 0 15px 24px rgba(0, 0, 0, 0.11),
+    0 15px 24px var(--box-shadow-color);
+}
+
+.card p {
+  font-size: 17px;
+  margin-top: 10px;
+  z-index: 1000;
+  transition: color 0.3s ease-out;
+}
+.card h5 {
+  z-index: 1000;
+  position: relative;
+  transition: color 0.3s ease-out;
+}
+.card h6 {
+  z-index: 1000;
+  position: relative;
+  transition: color 0.3s ease-out;
+}
+
+.card h5::before {
+  content: "";
+  height: 3px;
+  background-color: #fdbe01;
+  width: 50%;
+  position: absolute;
+  bottom: -6px;
+  transform: translateX(-50%);
+  left: 50%;
+  transition: 0.5s ease-in-out;
+}
+
+.card:hover h5::before {
+  content: "";
+  height: 3px;
+  background-color: #2e4a53;
+  width: 50%;
+  position: absolute;
+  bottom: -6px;
+  transform: translateX(-50%);
+  left: 50%;
+  transition: 0.5s ease-in-out;
+}
+
+.circle {
+  width: 98px;
+  height: 98px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 3px solid var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease-out;
+  margin-top: 20px;
+}
+.overlay {
+  width: 99px;
+  position: absolute;
+  height: 99px;
+  border-radius: 50%;
+  background: var(--bg-color);
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+  transition: transform 0.5s ease-in-out;
+}
+.circle:after {
+  content: "";
+  width: 87px;
+  height: 87px;
+  display: block;
+  position: absolute;
+  background: var(--bg-color);
+  border-radius: 50%;
+  transition: opacity 0.3s ease-in-out;
+}

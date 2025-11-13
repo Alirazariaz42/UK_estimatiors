@@ -1,0 +1,25 @@
+::-webkit-scrollbar {
+  width: 12px; /* Width of the entire scrollbar */
+  height: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2e4a53; /* Background of the scrollbar track */
+  border-radius: 2px; /* Rounded corners for the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ffc824; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the thumb */
+  border: 3px solid #fffb00; /* Space around the thumb to give a padding effect */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffc824; /* Color of the thumb when hovered */
+}
+
+@media screen and (min-width: 768px) {
+  p {
+    /* font-size: 17px; */
+  }
+}
